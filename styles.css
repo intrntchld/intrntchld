@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.cyber-container {
+  width: 100%;
+  max-width: 800px; /* Adjust the max-width as needed */
+  position: relative;
+}
+
+.moving-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.moving-icon {
+  position: absolute;
+  font-size: 24px;
+  color: #0F0;
+  animation: moveIcon 4s linear infinite;
+}
+
+@keyframes moveIcon {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(50px, 50px); }
+  50% { transform: translate(100px, 0); }
+  75% { transform: translate(0, 100px); }
+  100% { transform: translate(0, 0); }
+}
+
+.cyber-window {
+  background-color: #111;
+  border: 2px solid #00F;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.cyber-title-bar {
+  background: #00F;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cyber-title-bar-text {
+  color: #fff;
+  font-weight: bold;
+}
+
+.cyber-title-bar-controls button {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cyber-content {
+  padding: 20px;
+}
+
+.visualizer {
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.music-player {
+  position: relative;
+}
+
+button, input {
+  margin: 5px;
+}
+
+.status {
+  font-size: 14px;
+  color: #00F;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #fff;
+  position: relative;
+}
+
+#progressIndicator {
+  height: 100%;
+  width: 0;
+  background-color: #0F0;
+  position: absolute;
+}
+
