@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Cyberwave Music Player</title>
+</head>
+<body>
+  <div class="cyber-container">
+    <div class="moving-icons" id="movingIcons"></div>
+    <div class="cyber-window">
+      <div class="cyber-title-bar">
+        <div class="cyber-title-bar-text">Cyberwave Music Player</div>
+        <div class="cyber-title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="cyber-content">
+        <canvas class="visualizer" id="visualizer"></canvas>
+        <div class="music-player" id="musicPlayer">
+          <audio class="audio-player" type="audio/mp3"></audio>
+          <div class="controls">
+            <button id="playButton">Play</button>
+            <button id="stopButton">Stop</button>
+            <input id="volumeControl" type="range" min="0" max="1" step="0.1" value="1">
+          </div>
+          <div class="status">Status: Stopped</div>
+          <div class="progress-bar">
+            <div id="progressIndicator"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
